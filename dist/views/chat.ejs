@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="ko">
 <head>
     <style>
         * {
@@ -63,8 +63,18 @@
 <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 <script>
     $(() => {
-        const name = prompt('What your name');
-        const socket = io();
+        const name = prompt('이름을 입력하세요');
+
+        const url = 'http://localhost:3000';
+        const socket = io.connect(url, {
+            transports: ['websocket']
+        });
+        socket.on('welcome', (msg) => {
+            const admin = '관리자';
+            $('#messages').append($('<li>').text(admin + '  :  ' +
+                msg));
+        })
+
         let room = ['room1', 'room2'];
         let num = 0;
 

@@ -9,7 +9,7 @@ module.exports = {
       error_file: '/dev/null',
       out_file: '/dev/null',
       watch: true,
-      instances: 1,
+      instances: 2,
       exec_mode: 'cluster',
       max_memory_restart: '1700M',
       env_local: {
