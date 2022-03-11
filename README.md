@@ -11,4 +11,18 @@
   - Redis의 Publish/Subscribe 기능 활용
   - PM2를 활용한 Clustering 모드 적용
 
+## 테스트
+
+```shell
+npm init
+
+npm install
+
+tsc
+
+pm2 start ecosystem.config.js
+
+```
+
 ![스크린샷 2022-03-11 16 42 00](https://user-images.githubusercontent.com/88655377/157824044-a3c374c9-4936-4706-a22f-e83b77272255.png)
+
